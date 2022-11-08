@@ -1,0 +1,84 @@
+@import "nprogress/nprogress.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body,
+html {
+  height: 100%;
+}
+
+html::selection,
+::selection {
+  background: theme("colors.indigo.900") !important;
+  color: theme("colors.white");
+}
+
+body,
+#root {
+  @apply flex flex-col h-full;
+}
+
+.grayscale {
+  filter: grayscale(1);
+}
+
+#nprogress .bar {
+  background: theme("colors.indigo.400") !important;
+}
+
+#nprogress .peg {
+  box-shadow: 0 0 10px theme("colors.indigo.400"),
+    0 0 5px theme("colors.indigo.400") !important;
+}
+
+#nprogress .spinner-icon {
+  border-top-color: theme("colors.indigo.400") !important;
+  border-left-color: theme("colors.indigo.400") !important;
+}
+
+.skeleton {
+  animation: skeleton-glow 1s linear infinite alternate;
+  background: rgba(206, 217, 224, 0.2);
+  background-clip: padding-box !important;
+  border-color: rgba(206, 217, 224, 0.2) !important;
+  border-radius: 2px;
+  box-shadow: none !important;
+  color: transparent !important;
+  cursor: default;
+  pointer-events: none;
+  user-select: none;
+}
+
+.skeleton *,
+.skeleton:after,
+.skeleton:before {
+  visibility: hidden !important;
+}
+
+@keyframes skeleton-glow {
+  0% {
+    background: rgba(206, 217, 224, 0.2);
+    border-color: rgba(206, 217, 224, 0.2);
+  }
+
+  to {
+    background: rgba(92, 112, 128, 0.2);
+    border-color: rgba(92, 112, 128, 0.2);
+  }
+}
+
+.max-w-prose {
+  max-width: 80ch;
+}
+
+.controls {
+  display: none;
+}
+
+@screen lg {
+  .controls {
+    display: block;
+  }
+}
