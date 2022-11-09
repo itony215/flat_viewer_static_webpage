@@ -235,8 +235,7 @@
     }
   )
 $('div').click(function (event)
-{ 
-  $("#stockDetail").html(divClone); 
+{  
   var $target = $(event.target); // the element that fired the original click event
   var regex = /^[0-9]{4}$/
   // console.log($target[0].title)
@@ -258,6 +257,7 @@ $('div').click(function (event)
 }); 
 function getinfo(stock_id){
   // console.log('getinfo')
+  $("#stockDetail").html(divClone);
         //$.getJSON('https://raw.githubusercontent.com/itony215/test_data/main/StockServices.json', function(data){
         $.getJSON('https://raw.githubusercontent.com/itony215/flat_viewer_data/main/info/info_'+stock_id+'.json', function(data){
         //console.log('4444',data)

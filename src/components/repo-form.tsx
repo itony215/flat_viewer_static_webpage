@@ -7,8 +7,8 @@ import cc from "classcat";
 import { Repo } from "../types";
 
 const initialValues: Repo = {
-  owner: "",
-  name: "",
+  owner: "itony215",
+  name: "stock_data",
 };
 
 const validationSchema = object().shape({
