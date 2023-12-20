@@ -264,22 +264,22 @@ function getinfo(stock_id){
         $("#stock_name").text(data[0]["symbolName"]);
         $("#stock").text(data[0]["systexId"]);
         $("#sectorName").text(data[0]["sectorName"]);
-        $("#price").text(data[0]["price"]);
-        $("#change").text(data[0]["change"]);
+        $("#price").text(data[0]["price"]["raw"]);
+        $("#change").text(data[0]["change"]["raw"]);
         $("#changePercent").text('('+data[0]["changePercent"]+')');
         $("#limitUpPrice").text(data[0]["limitUpPrice"]);
         $("#limitDownPrice").text(data[0]["limitDownPrice"]);
 
-        $("#regularMarketDayHigh").text(data[0]["regularMarketDayHigh"]);
-        $("#regularMarketDayLow").text(data[0]["regularMarketDayLow"]);
-        $("#regularMarketOpen").text(data[0]["regularMarketOpen"]);
-        $("#yesterday_closer").text(data[0]["regularMarketPreviousClose"]);
+        $("#regularMarketDayHigh").text(data[0]["regularMarketDayHigh"]["raw"]);
+        $("#regularMarketDayLow").text(data[0]["regularMarketDayLow"]["raw"]);
+        $("#regularMarketOpen").text(data[0]["regularMarketOpen"]["raw"]);
+        $("#yesterday_closer").text(data[0]["regularMarketPreviousClose"]["raw"]);
         $("#previousVolume").text(data[0]["previousVolume"]/1000);
         $("#avgPrice").text(data[0]["avgPrice"]);
         $("#volume").text(data[0]["volume"]/1000);
         $("#turnoverM").text((data[0]["turnoverM"]/100).toFixed(3));
-        $("#dealPrice").text(data[0]["price"]);
-        $("#change2").text(data[0]["change"]);
+        $("#dealPrice").text(data[0]["price"]["raw"]);
+        $("#change2").text(data[0]["change"]["raw"]);
         $("#changePercent2").text(data[0]["changePercent"]);
         var inMarket = data[0]["inMarket"]
         var outMarket = data[0]["outMarket"]
